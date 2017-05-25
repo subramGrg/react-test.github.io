@@ -1,0 +1,9 @@
+Whenever you call setState and update something in the state object, your component’s render method gets automatically called. This kicks off a cascade of render calls for any component whose output is also affected. The end result of all this is that what you see in your screen in the latest representation of your app’s UI state.
+
+componentDidMount() - execute after component is on rendered
+getInitialState() - execute before rendered or mounted
+setState() - update value of state object
+
+React uses 'key' prop uses to uniquely identify each particular component. This ensures that each component we dynamically create ends up getting a unique identifier that React can then use to optimize any future UI updates.
+
+Components are wrappers for DOM elements
