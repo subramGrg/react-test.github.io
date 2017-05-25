@@ -17,12 +17,18 @@
 					var cardClass = {
 						width: 100,
 						backgroundColor: '#fff',
-						border: '1px solid #FFBCA7'
+						border: '1px solid #FFBCA7',
+						height: 140,
+						display: 'flex',
+						flexDirection: 'column',
+						alignItems:  'center',
+						flexWrap: 'wrap'
 					}
 
 					return(
 						<div style={cardClass}>
-							<Sign />
+							<Sign colour={this.props.colour}/>
+							<Letter colour={this.props.colour}/>
 						</div>
 					);
 				}
@@ -30,8 +36,27 @@
 
 			var Sign = React.createClass({
 				render: function() {
+					var signStyle = {
+						backgroundColor: this.props.colour,
+						height: '80%',
+						width: '100%'
+					}
 					return(
-						<p>Here</p>
+						<div style={signStyle}></div>
+					);
+				}
+			});
+
+			var Letter = React.createClass({
+				render: function() {
+					var letterStyle = {
+						textAlign: 'center',
+						margin: 0,
+						height: '20%',
+						width: '100%'
+					}
+					return (
+						<p style={letterStyle}>{this.props.colour}</p>
 					);
 				}
 			});
