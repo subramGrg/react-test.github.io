@@ -15,10 +15,10 @@
 			var Counter = React.createClass({
 				render: function() {
 					var textStyle = {
-					fontSize: 72,
-					fontFamily: "sans-serif",
-					color: "#333",
-					fontWeight: "bold"
+						fontSize: 72,
+						fontFamily: "sans-serif",
+						color: "#333",
+						fontWeight: "bold"
 					};
 					return (
 						<div style={textStyle}>
@@ -68,8 +68,16 @@
 					return (
 						<div style={backgroundStyle}>
 							<Counter display={this.state.count}/>
-							<button onClick={this.increase} style={buttonStyle}>+</button>
+							<PlusButton clickHandler={this.increase} />
 						</div>
+					);
+				}
+			});
+
+			var PlusButton = React.createClass({
+				render: function() {
+					return(
+						<button onclick={this.props.clickHandler}>+</button>
 					);
 				}
 			});

@@ -1,9 +1,36 @@
 Whenever you call setState and update something in the state object, your component’s render method gets automatically called. This kicks off a cascade of render calls for any component whose output is also affected. The end result of all this is that what you see in your screen in the latest representation of your app’s UI state.
 
-componentDidMount() - execute after component is on rendered
+componentDidMount() - execute after component is rendered
+componentWillUnmount() - execute when component is about to be destroyed
 getInitialState() - execute before rendered or mounted
 setState() - update value of state object
 
 React uses 'key' prop uses to uniquely identify each particular component. This ensures that each component we dynamically create ends up getting a unique identifier that React can then use to optimize any future UI updates.
 
-Components are wrappers for DOM elements
+Components are wrappers for DOM elements.
+You simply can’t listen for events on components directly because components are wrappers for DOM elements.
+
+In React, the value of this inside your event handler is different from what you would normally see in the non-React DOM world
+'this' inside your event handler always refers to the component the event handler lives in.
+
+component lifecycle methods phase:
+1, getDefaultProps: This method allows you to specify the default value of 'this.props'. It gets called before
+your component is even created or any props from parents are passed in.
+2, getInitialState: This method allows you to specify the default value of this.state before your component
+is created. Just like getDefaultProps, it too gets called before your component is created.
+3, componentWillMount: This is the last method that gets called before your component gets rendered to the DOM.
+There is an important thing to note here. If you were to call setState inside this method,
+your component will not re-render (aka have the render method get called and update what
+gets displayed on screen).
+4, render: Every component must have this method defined. If you don’t wish to render anything return null or false.
+5, componentDidMount: This method gets called immediately after your component renders and gets placed on the
+DOM. At this point, you can safely perform any DOM querying operations without worrying
+about whether your component has made it or not. If you have any code that depends on your
+component being ready, you can specify all of that code here as well.
+With the exception of the render method, all of these lifecycle methods can fire only once.
+That’s quite different from the methods we are about to see next.
+
+When a state change occurs, your component will call its render method again.
+Any components that rely on the output of this component will also get their
+render methods called as well.
+pg: 138
