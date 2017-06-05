@@ -33,4 +33,6 @@ That’s quite different from the methods we are about to see next.
 When a state change occurs, your component will call its render method again.
 Any components that rely on the output of this component will also get their
 render methods called as well.
-pg: 138
+
+ref={} => gets called when component mounts and a reference to the html element is passed in as an
+argument.
