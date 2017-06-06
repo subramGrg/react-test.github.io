@@ -1,3 +1,5 @@
+Props (short for properties) of a Component.
+
 Whenever you call setState and update something in the state object, your component’s render method gets automatically called. This kicks off a cascade of render calls for any component whose output is also affected. The end result of all this is that what you see in your screen in the latest representation of your app’s UI state.
 
 componentDidMount() - execute after component is rendered
@@ -36,3 +38,11 @@ render methods called as well.
 
 ref={} => gets called when component mounts and a reference to the html element is passed in as an
 argument.
+
+The Router component is part of the React Router API, and its job is to deal with all of the
+routing-related logic our app will need. Here we specify routing configuration, the mapping
+between URLs and the views. #<ReactRouter.Route>
+
+<ReactRouter.Route path="/" component={App}></ReactRouter.Route>
+path prop: specifies the URL we are interested in matching
+component prop: specify the name of the component
