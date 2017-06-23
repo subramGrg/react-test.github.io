@@ -11,36 +11,71 @@
 		</div>
 
 		<script type="text/babel">
-			var Letter = React.createClass({
+			var Card = React.createClass({
 				render: function() {
-					var LetterStyle = {
-						width: '20px',
-						display: 'inline-block',
-						fontFamily: "monospace",
-						padding: '10px',
-						marginRight: '20px',
-						backgroundColor: '#000000',
-						color: '#fff',
-						fontSize: '12px',
-						textAlign: 'center'
-					}
-
 					return(
-						<div style={LetterStyle}>
-							{this.props.children}
+						<div>
+							<UpperRow {...this.props}/>
+							<LowerRow {...this.props}/>
 						</div>
 					);
 				}
 			});
 
+			var UpperRow = React.createClass({
+				render: function() {
+					var container = {
+						display: 'flex'
+					}
+
+					return(
+						<div  style={container}>
+							<Row {...this.props} colour='#FF7F50'>H</Row>
+							<Row {...this.props} colour='#FF7F50'>E</Row>
+							<Row {...this.props} colour='#FF7F50'>L</Row>
+							<Row {...this.props} colour='#FF7F50'>L</Row>
+							<Row {...this.props} colour='#FF7F50'>O</Row>
+						</div>
+					);
+				}
+			});
+
+			var LowerRow = React.createClass({
+				render: function() {
+					var container = {
+						display: 'flex'
+					}
+
+					return(
+						<div style={container}>
+							<Row {...this.props} colour='blue'>W</Row>
+							<Row {...this.props} colour='orange'>O</Row>
+							<Row {...this.props} colour='yellow'>R</Row>
+							<Row {...this.props} colour='grey'>L</Row>
+							<Row {...this.props} colour='black'>D</Row>
+						</div>
+					);
+				}
+			});
+
+			var Row = React.createClass({
+				render: function() {
+					var RowStyle = {
+						width: this.props.width,
+						padding: '10px 0',
+						background: this.props.colour,
+						marginLeft: '20px',
+						color: '#fff',
+						textAlign: 'center'
+					}
+					return(
+						<p style={RowStyle}>{this.props.children}</p>
+					);
+				}
+			});
+
 			ReactDOM.render(
-				<div>
-					<Letter>H</Letter>
-					<Letter>E</Letter>
-					<Letter>L</Letter>
-					<Letter>L</Letter>
-					<Letter>O</Letter>
-				</div>,
+				<Card width='30px'/>,
 				document.querySelector('#container')
 			);
 		</script>
