@@ -46,3 +46,6 @@ between URLs and the views. #<ReactRouter.Route>
 <ReactRouter.Route path="/" component={App}></ReactRouter.Route>
 path prop: specifies the URL we are interested in matching
 component prop: specify the name of the component
+
+## The way React makes UI updates really fast is by having a good idea of what exactly is going on in your DOM. This is done internally by marking each element with some sort of an identifier.
+When you create elements dynamically (such as array of Circle components), these identifiers are not automatically set. Hence we have to add key prop whose value React uses to uniquely identify each particular component.
