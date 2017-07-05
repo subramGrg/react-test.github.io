@@ -1,0 +1,22 @@
+Props (short for properties) of a Component.
+
+React uses 'key' prop uses to uniquely identify each particular component. This ensures that each component we dynamically create ends up getting a unique identifier that React can then use to optimize any future UI updates.
+
+Components are wrappers for DOM elements.
+You simply can’t listen for events on components directly because components are wrappers for DOM elements.
+
+In React, the value of this inside your event handler is different from what you would normally see in the non-React DOM world. 'this' inside your event handler always refers to the component the event handler lives in.
+
+When a state change occurs, your component will call its render method again.
+Any components that rely on the output of this component will also get their render methods called as well.
+
+Access DOM Elemens (Hard to do via React way):
+Inside various render methods, we’ve been writing HTML-like things known as JSX. Our JSX is simply a description of what the DOM should look like. It doesn’t represent actual HTML—despite looking a whole lot like it. Anyway, to provide a bridge between JSX and the final HTML elements in the DOM, React provides us with something funnily known as refs (short for references). The way refs work is a little odd.
+
+DOM is accessed using refs, by setting the ref attribute on the element to be accessed. eg: <input ref={}>
+
+What you typically set as the ref attribute’s value is a JavaScript callback function. This function gets called automatically when the component housing this render method gets mounted.
+
+Eg:
+<input ref={function(el) {this.el = this;} )} >
+A reference to the final HTML DOM element is passed in as an argument 'el'. Autobinding doesn’t happen automatically this time around!

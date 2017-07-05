@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 10px;
+}
+
+header {
+	background: #283239;
+}
+
+ul {
+	list-style:  none;
+	padding: 0;
+}
+
+header li {
+	display: inline-block;
+	margin-right: 10px;
+	font-family: Arial;
+	color: #fff;
+}

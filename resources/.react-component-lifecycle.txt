@@ -1,0 +1,30 @@
+Whenever you call setState and update something in the state object, your component’s render method gets automatically called. This kicks off a cascade of render calls for any component whose output is also affected. The end result of all this is that what you see in your screen in the latest representation of your app’s UI state.
+
+componentDidMount() - execute after component is rendered
+componentWillUnmount() - execute when component is about to be destroyed
+getInitialState() - execute before rendered / mounted
+setState() - update value of state object
+
+component lifecycle methods phase:
+1, getDefaultProps: This method allows you to specify the default value of 'this.props'. It gets called before your component is even created or any props from parents are passed in.
+2, getInitialState: This method allows you to specify the default value of this.state before your components get created. Just like getDefaultProps, it too gets called before your component is created.
+3, componentWillMount: This is the last method that gets called before your component gets rendered to the DOM.There is an important thing to note here. If you were to call setState inside this method, your component will not re-render (aka have the render method get called and update what gets displayed on screen).
+4, render: Every component must have this method defined. If you don’t wish to render anything return null or false.
+5, componentDidMount: This method gets called immediately after your component renders and gets placed on the DOM. At this point, you can safely perform any DOM querying operations without worrying about whether your component has made it or not. If you have any code that depends on your component being ready, you can specify all of that code here as well.
+
+With the exception of the render method, all of these lifecycle methods can fire only once.
+That’s quite different from the methods we are about to see next.
+
+When a state changes the following happens:
+1) shouldComponentUpdate, 2) componentWillUpdate, 3) render & 4) componentDidUpdate
+
+1) If you use this method and return a true value, the component will update otherwise it will not.
+2) You can’t change your state by calling this.setState from this method.
+3) Will only execute if shouldComponentUpdate returns true
+4) This method gets called after your component updates and the render method has been called.
+
+When props changes the following happens:
+1) componentWillReceiveProps & then same steps as when state changes
+- This method returns one argument, and this argument is an object that contains the new prop values that are about to be assigned to it.
+
+componentWillUnmount: Perform any cleanup-related tasks her like removing event listener. Then the component is removed from DOM.
