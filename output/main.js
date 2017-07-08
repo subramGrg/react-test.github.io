@@ -25760,9 +25760,13 @@ var _header = __webpack_require__(225);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _section = __webpack_require__(226);
+var _section = __webpack_require__(227);
 
 var _section2 = _interopRequireDefault(_section);
+
+var _Base = __webpack_require__(230);
+
+var _Base2 = _interopRequireDefault(_Base);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25786,7 +25790,7 @@ var App = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'main',
-        null,
+        { className: _Base2.default.wrapper },
         _react2.default.createElement(_header2.default, null),
         _react2.default.createElement(_section2.default, null)
       );
@@ -25817,6 +25821,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(56);
 
+var _Header = __webpack_require__(226);
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25838,17 +25846,26 @@ var Header = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'nav',
-        null,
+        'header',
+        { className: _Header2.default.header },
         _react2.default.createElement(
-          _reactRouterDom.NavLink,
-          { exact: true, to: '/' },
-          'Home'
-        ),
-        _react2.default.createElement(
-          _reactRouterDom.NavLink,
-          { to: '/project' },
-          'Projects'
+          'nav',
+          { className: _Header2.default.nav },
+          _react2.default.createElement(
+            _reactRouterDom.NavLink,
+            { exact: true, to: '/' },
+            'Home'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.NavLink,
+            { className: _Header2.default.logo, to: '/' },
+            'SG'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.NavLink,
+            { to: '/project' },
+            'Projects'
+          )
         )
       );
     }
@@ -25861,6 +25878,16 @@ exports.default = Header;
 
 /***/ }),
 /* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// removed by extract-text-webpack-plugin
+module.exports = { "logo": "dev-lib-stylesheets--Header-logo" };
+
+/***/ }),
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25882,11 +25909,11 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouterDom = __webpack_require__(56);
 
-var _projects = __webpack_require__(227);
+var _projects = __webpack_require__(228);
 
 var _projects2 = _interopRequireDefault(_projects);
 
-var _home = __webpack_require__(228);
+var _home = __webpack_require__(229);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -25925,7 +25952,7 @@ var Section = function (_React$Component) {
 exports.default = Section;
 
 /***/ }),
-/* 227 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25975,7 +26002,7 @@ var Projects = function (_React$Component) {
 exports.default = Projects;
 
 /***/ }),
-/* 228 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26023,6 +26050,14 @@ var Home = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Home;
+
+/***/ }),
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// removed by extract-text-webpack-plugin
+
 
 /***/ })
 /******/ ]);
