@@ -1,0 +1,16 @@
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial;
+  color: $primary-colour;
+}
+
+h1 {
+  margin: 0;
+}
+
+section {
+  max-width: 950px;
+  margin: 0 auto;
+}
