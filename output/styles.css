@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/roboto.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: url(fonts/roboto-light.woff) format("woff"); }
+
 body {
   margin: 0;
   font-family: Helvetica, Arial;
@@ -7,8 +15,54 @@ h1 {
   margin: 0; }
 
 section {
-  max-width: 950px;
+  max-width: 670px;
   margin: 0 auto; }
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/roboto.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: url(fonts/roboto-light.woff) format("woff"); }
+
+.dev-lib-stylesheets--Home-article {
+  font-family: 'Roboto', Helvetica; }
+  .dev-lib-stylesheets--Home-article article {
+    margin-bottom: 40px; }
+  .dev-lib-stylesheets--Home-article h2.dev-lib-stylesheets--Home-title {
+    font-family: 'Roboto-light', Helvetica;
+    font-size: 2rem;
+    margin: 16px 0 0; }
+  .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-tag {
+    color: #585858;
+    font-style: italic;
+    display: block;
+    margin-bottom: 22px; }
+  .dev-lib-stylesheets--Home-article p {
+    margin: 0 0 24px;
+    word-spacing: 2px;
+    font-size: 18px;
+    color: #585858;
+    line-height: 30px; }
+  .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-link {
+    transition: background 0.3s ease-out;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: #585858;
+    color: #fff;
+    width: 128px;
+    text-align: center; }
+    .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-link:hover {
+      background: #2d2d2d; }
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/roboto.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: url(fonts/roboto-light.woff) format("woff"); }
+
 header {
   background: #2d2d2d;
   margin-bottom: 16px; }
@@ -19,7 +73,8 @@ nav {
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  border-bottom: #CCC solid 1px; }
   nav a {
     color: #fff;
     margin-right: 20px;

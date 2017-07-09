@@ -25764,7 +25764,7 @@ var _section = __webpack_require__(227);
 
 var _section2 = _interopRequireDefault(_section);
 
-var _Base = __webpack_require__(230);
+var _Base = __webpack_require__(232);
 
 var _Base2 = _interopRequireDefault(_Base);
 
@@ -26018,6 +26018,14 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ruby = __webpack_require__(230);
+
+var _ruby2 = _interopRequireDefault(_ruby);
+
+var _Home = __webpack_require__(231);
+
+var _Home2 = _interopRequireDefault(_Home);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26039,9 +26047,66 @@ var Home = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'h1',
-        null,
-        'This is Home page.'
+        'div',
+        { className: _Home2.default.article },
+        _react2.default.createElement(
+          'article',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
+            _react2.default.createElement('img', { src: _ruby2.default, alt: 'ruby-logo' })
+          ),
+          _react2.default.createElement(
+            'h2',
+            { className: _Home2.default.title },
+            'Robot Simulator'
+          ),
+          _react2.default.createElement(
+            'span',
+            { className: _Home2.default.tag },
+            'Ruby, RSpec'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'A fun little Ruby application i developed that simulates a robot moving on a 5x5 unit table by giving commands. This is a non GUI based program.'
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: _Home2.default.link, href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
+            'view repository'
+          )
+        ),
+        _react2.default.createElement(
+          'article',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
+            _react2.default.createElement('img', { src: _ruby2.default, alt: 'ruby-logo' })
+          ),
+          _react2.default.createElement(
+            'h2',
+            { className: _Home2.default.title },
+            'Robot Simulator'
+          ),
+          _react2.default.createElement(
+            'span',
+            { className: _Home2.default.tag },
+            'Ruby, RSpec'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'A fun little Ruby application i developed that simulates a robot moving on a 5x5 unit table by giving commands. This is a non GUI based program.'
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: _Home2.default.link, href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
+            'view repository'
+          )
+        )
       );
     }
   }]);
@@ -26053,6 +26118,25 @@ exports.default = Home;
 
 /***/ }),
 /* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__.p + "img/ruby.png";
+
+/***/ }),
+/* 231 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// removed by extract-text-webpack-plugin
+module.exports = { "article": "dev-lib-stylesheets--Home-article", "title": "dev-lib-stylesheets--Home-title", "tag": "dev-lib-stylesheets--Home-tag", "link": "dev-lib-stylesheets--Home-link" };
+
+/***/ }),
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
