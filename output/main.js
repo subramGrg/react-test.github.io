@@ -25764,7 +25764,11 @@ var _section = __webpack_require__(227);
 
 var _section2 = _interopRequireDefault(_section);
 
-var _Base = __webpack_require__(232);
+var _footer = __webpack_require__(232);
+
+var _footer2 = _interopRequireDefault(_footer);
+
+var _Base = __webpack_require__(234);
 
 var _Base2 = _interopRequireDefault(_Base);
 
@@ -25792,7 +25796,8 @@ var App = function (_React$Component) {
         'main',
         { className: _Base2.default.wrapper },
         _react2.default.createElement(_header2.default, null),
-        _react2.default.createElement(_section2.default, null)
+        _react2.default.createElement(_section2.default, null),
+        _react2.default.createElement(_footer2.default, null)
       );
     }
   }]);
@@ -25991,7 +25996,7 @@ var Projects = function (_React$Component) {
       return _react2.default.createElement(
         'h1',
         null,
-        'This is the project page'
+        'Content will come soon.....'
       );
     }
   }]);
@@ -26058,24 +26063,28 @@ var Home = function (_React$Component) {
             _react2.default.createElement('img', { src: _ruby2.default, alt: 'ruby-logo' })
           ),
           _react2.default.createElement(
-            'h2',
-            { className: _Home2.default.title },
-            'Robot Simulator'
-          ),
-          _react2.default.createElement(
-            'span',
-            { className: _Home2.default.tag },
-            'Ruby, RSpec'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'A fun little Ruby application i developed that simulates a robot moving on a 5x5 unit table by giving commands. This is a non GUI based program.'
-          ),
-          _react2.default.createElement(
-            'a',
-            { className: _Home2.default.link, href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
-            'view repository'
+            'div',
+            { className: _Home2.default.container },
+            _react2.default.createElement(
+              'h2',
+              { className: _Home2.default.title },
+              'Robot Simulator'
+            ),
+            _react2.default.createElement(
+              'span',
+              { className: _Home2.default.tag },
+              'Ruby, RSpec'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'A fun little Ruby application i developed that simulates a robot moving on a 5x5 unit table by giving commands. This is a non GUI based program.'
+            ),
+            _react2.default.createElement(
+              'a',
+              { className: _Home2.default.link, href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
+              'view repository'
+            )
           )
         ),
         _react2.default.createElement(
@@ -26097,7 +26106,7 @@ var Home = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: _Home2.default.copy },
+            { className: _Home2.default.copy + " " + _Home2.default.container },
             _react2.default.createElement(
               'h3',
               { className: _Home2.default.title },
@@ -26115,7 +26124,7 @@ var Home = function (_React$Component) {
             ),
             _react2.default.createElement(
               'a',
-              { className: _Home2.default.link, href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
+              { className: _Home2.default.link, href: 'https://github.com/subramGrg/sim-cart', target: '_blank' },
               'view repository'
             )
           )
@@ -26146,10 +26155,85 @@ module.exports = __webpack_require__.p + "img/ruby.png";
 
 
 // removed by extract-text-webpack-plugin
-module.exports = { "article": "dev-lib-stylesheets--Home-article", "title": "dev-lib-stylesheets--Home-title", "tag": "dev-lib-stylesheets--Home-tag", "link": "dev-lib-stylesheets--Home-link", "timeline": "dev-lib-stylesheets--Home-timeline", "earlier-project": "dev-lib-stylesheets--Home-earlier-project", "image-wrapper": "dev-lib-stylesheets--Home-image-wrapper", "copy": "dev-lib-stylesheets--Home-copy" };
+module.exports = { "article": "dev-lib-stylesheets--Home-article", "title": "dev-lib-stylesheets--Home-title", "tag": "dev-lib-stylesheets--Home-tag", "link": "dev-lib-stylesheets--Home-link", "timeline": "dev-lib-stylesheets--Home-timeline", "earlier-project": "dev-lib-stylesheets--Home-earlier-project", "image-wrapper": "dev-lib-stylesheets--Home-image-wrapper", "copy": "dev-lib-stylesheets--Home-copy", "container": "dev-lib-stylesheets--Home-container" };
 
 /***/ }),
 /* 232 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Footer = __webpack_require__(233);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Footer = function (_React$Component) {
+  _inherits(Footer, _React$Component);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+  }
+
+  _createClass(Footer, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'footer',
+        { className: _Footer2.default.footer },
+        _react2.default.createElement(
+          'nav',
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            _react2.default.createElement(
+              'span',
+              null,
+              'HI and welcome.'
+            ),
+            'My name is Subram. I have been developing applications commercially for three years. I have worked with various programming languages including Ruby, Python, Java and Javascript.'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Footer;
+}(_react2.default.Component);
+
+exports.default = Footer;
+
+/***/ }),
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// removed by extract-text-webpack-plugin
+
+
+/***/ }),
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

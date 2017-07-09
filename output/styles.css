@@ -20,6 +20,12 @@ h4 {
 section {
   max-width: 670px;
   margin: 0 auto; }
+
+p {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
 @font-face {
   font-family: Roboto;
   src: url(fonts/roboto.woff) format("woff"); }
@@ -72,12 +78,63 @@ section {
     display: flex; }
     .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-earlier-project .dev-lib-stylesheets--Home-image-wrapper {
       width: 40%; }
-    .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-earlier-project img {
-      max-width: 100%; }
     .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-earlier-project .dev-lib-stylesheets--Home-copy {
       width: 60%;
       line-height: normal;
       padding-left: 14px; }
+  @media screen and (max-width: 670px) {
+    .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-container {
+      padding: 0 10px; } }
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/roboto.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: url(fonts/roboto-light.woff) format("woff"); }
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial;
+  color: #2d2d2d; }
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0; }
+
+section {
+  max-width: 670px;
+  margin: 0 auto; }
+
+p {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+footer {
+  border-top: 2px solid #ccc;
+  padding: 26px;
+  background: #F9F9F9;
+  margin-top: 60px; }
+  footer nav {
+    max-width: 670px;
+    margin: 0 auto;
+    height: auto; }
+  footer p {
+    font-family: 'Roboto-light', Helvetica;
+    line-height: 26px;
+    width: 60%;
+    color: #585858;
+    padding: 20px 20px 20px 0;
+    border-right: 2px solid #ccc; }
+    footer p span {
+      color: #ccc;
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 16px; }
 @font-face {
   font-family: Roboto;
   src: url(fonts/roboto.woff) format("woff"); }
@@ -89,15 +146,16 @@ section {
 header {
   background: #2d2d2d;
   margin-bottom: 16px; }
+  header nav {
+    align-items: center;
+    border-bottom: #CCC solid 1px;
+    justify-content: center; }
 
 nav {
   margin: 0 auto;
   max-width: 950px;
   height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: #CCC solid 1px; }
+  display: flex; }
   nav a {
     color: #fff;
     margin-right: 20px;

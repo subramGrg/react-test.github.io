@@ -11,12 +11,15 @@ class Home extends React.Component {
           <a href='https://github.com/subramGrg/robot-simulator' target='_blank'>
             <img src={img} alt='ruby-logo'/>
           </a>
-          <h2 className={style.title}>Robot Simulator</h2>
-          <span className={style.tag}>Ruby, RSpec</span>
 
-          <p>A fun little Ruby application i developed that simulates a robot moving on a 5x5 unit table by giving commands. This is a non GUI based program.</p>
+          <div className={style.container}>
+            <h2 className={style.title}>Robot Simulator</h2>
+            <span className={style.tag}>Ruby, RSpec</span>
 
-          <a className={style.link} href='https://github.com/subramGrg/robot-simulator' target='_blank'>view repository</a>
+            <p>A fun little Ruby application i developed that simulates a robot moving on a 5x5 unit table by giving commands. This is a non GUI based program.</p>
+
+            <a className={style.link} href='https://github.com/subramGrg/robot-simulator' target='_blank'>view repository</a>
+          </div>
         </article>
 
         <div className={style.timeline}>
@@ -27,13 +30,13 @@ class Home extends React.Component {
           <div className={style['image-wrapper']}>
             <img src={img}/>
           </div>
-          <div className={style.copy}>
+          <div className={style.copy + " " + style.container}>
             <h3 className={style.title}>Shopping Cart experience</h3>
             <span className={style.tag}>Ruby, RSpec</span>
 
             <p>This program adds items from a YAML file to a cart and accumulates the total at the end of the application.</p>
 
-            <a className={style.link} href='https://github.com/subramGrg/robot-simulator' target='_blank'>view repository</a>
+            <a className={style.link} href='https://github.com/subramGrg/sim-cart' target='_blank'>view repository</a>
           </div>
         </div>
       </div>

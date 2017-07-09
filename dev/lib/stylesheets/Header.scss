@@ -3,6 +3,12 @@
 header {
   background: $primary-colour;
   margin-bottom: 16px;
+
+  nav {
+    align-items: center;
+    border-bottom: #CCC solid 1px;
+    justify-content: center;
+  }
 }
 
 nav {
@@ -10,10 +16,7 @@ nav {
   max-width: 950px;
   height: 80px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: #CCC solid 1px;
-  
+
   a {
     color: #fff;
     margin-right: 20px;
