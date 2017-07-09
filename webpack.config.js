@@ -4,7 +4,6 @@ var path = require('path');
 var DEV = path.resolve(__dirname, 'dev');
 var OUTPUT = path.resolve(__dirname, 'output');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
   entry: DEV + '/index.jsx',
@@ -31,15 +30,13 @@ var config = {
           }
         ])
       }, {
-        test: /\.html$/,
-        use: ['html-loader']
-      }, {
         test: /\.(jpg|png$)/,
         use: [{
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'img/'
+            outputPath: 'img/',
+            publicPath: './output/'
           }
         }]
       } ,{
@@ -55,10 +52,7 @@ var config = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
-    new HtmlWebpackPlugin({
-      template: 'dev/index.html'
-    })
+    new ExtractTextPlugin("styles.css")
   ]
 }
 

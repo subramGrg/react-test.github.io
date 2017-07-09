@@ -26145,7 +26145,7 @@ exports.default = Home;
 "use strict";
 
 
-module.exports = __webpack_require__.p + "img/ruby.png";
+module.exports = "./output/img/ruby.png";
 
 /***/ }),
 /* 231 */
