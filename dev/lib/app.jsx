@@ -11,6 +11,7 @@ class App extends React.Component {
       <main className={style.wrapper}>
         <Header />
         <Section />
+        <Footer />
       </main>
     );
   }

@@ -7,10 +7,13 @@
     margin-bottom: 40px;
   }
 
-  h2.title {
-    @include primary-light-font;
+  h2 {
     font-size: 2rem;
     margin: 16px 0 0;
+  }
+
+  .title {
+    @include primary-light-font;
   }
 
   .tag {
@@ -40,6 +43,35 @@
 
     &:hover {
       background: $primary-colour;
+    }
+  }
+
+  .timeline {
+    @include primary-light-font;
+    font-size: 1.1rem;
+    color: #cccccc;
+    padding: 18px 0;
+    border: 1px solid #CCC;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .earlier-project {
+    display: flex;
+
+    .image-wrapper {
+      width: 40%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .copy {
+      width: 60%;
+      line-height: normal;
+      padding-left: 14px;
     }
   }
 }

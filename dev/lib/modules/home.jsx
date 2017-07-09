@@ -18,6 +18,24 @@ class Home extends React.Component {
 
           <a className={style.link} href='https://github.com/subramGrg/robot-simulator' target='_blank'>view repository</a>
         </article>
+
+        <div className={style.timeline}>
+          <h4>Earlier Projects</h4>
+        </div>
+
+        <div className={style['earlier-project']}>
+          <div className={style['image-wrapper']}>
+            <img src={img}/>
+          </div>
+          <div className={style.copy}>
+            <h3 className={style.title}>Shopping Cart experience</h3>
+            <span className={style.tag}>Ruby, RSpec</span>
+
+            <p>This program adds items from a YAML file to a cart and accumulates the total at the end of the application.</p>
+
+            <a className={style.link} href='https://github.com/subramGrg/robot-simulator' target='_blank'>view repository</a>
+          </div>
+        </div>
       </div>
     );
   }

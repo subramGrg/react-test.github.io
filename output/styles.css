@@ -11,7 +11,10 @@ body {
   font-family: Helvetica, Arial;
   color: #2d2d2d; }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0; }
 
 section {
@@ -29,10 +32,11 @@ section {
   font-family: 'Roboto', Helvetica; }
   .dev-lib-stylesheets--Home-article article {
     margin-bottom: 40px; }
-  .dev-lib-stylesheets--Home-article h2.dev-lib-stylesheets--Home-title {
-    font-family: 'Roboto-light', Helvetica;
+  .dev-lib-stylesheets--Home-article h2 {
     font-size: 2rem;
     margin: 16px 0 0; }
+  .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-title {
+    font-family: 'Roboto-light', Helvetica; }
   .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-tag {
     color: #585858;
     font-style: italic;
@@ -55,6 +59,25 @@ section {
     text-align: center; }
     .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-link:hover {
       background: #2d2d2d; }
+  .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-timeline {
+    font-family: 'Roboto-light', Helvetica;
+    font-size: 1.1rem;
+    color: #cccccc;
+    padding: 18px 0;
+    border: 1px solid #CCC;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 20px; }
+  .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-earlier-project {
+    display: flex; }
+    .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-earlier-project .dev-lib-stylesheets--Home-image-wrapper {
+      width: 40%; }
+    .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-earlier-project img {
+      max-width: 100%; }
+    .dev-lib-stylesheets--Home-article .dev-lib-stylesheets--Home-earlier-project .dev-lib-stylesheets--Home-copy {
+      width: 60%;
+      line-height: normal;
+      padding-left: 14px; }
 @font-face {
   font-family: Roboto;
   src: url(fonts/roboto.woff) format("woff"); }

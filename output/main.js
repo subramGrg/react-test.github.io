@@ -26079,32 +26079,45 @@ var Home = function (_React$Component) {
           )
         ),
         _react2.default.createElement(
-          'article',
-          null,
+          'div',
+          { className: _Home2.default.timeline },
           _react2.default.createElement(
-            'a',
-            { href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
-            _react2.default.createElement('img', { src: _ruby2.default, alt: 'ruby-logo' })
-          ),
-          _react2.default.createElement(
-            'h2',
-            { className: _Home2.default.title },
-            'Robot Simulator'
-          ),
-          _react2.default.createElement(
-            'span',
-            { className: _Home2.default.tag },
-            'Ruby, RSpec'
-          ),
-          _react2.default.createElement(
-            'p',
+            'h4',
             null,
-            'A fun little Ruby application i developed that simulates a robot moving on a 5x5 unit table by giving commands. This is a non GUI based program.'
+            'Earlier Projects'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: _Home2.default['earlier-project'] },
+          _react2.default.createElement(
+            'div',
+            { className: _Home2.default['image-wrapper'] },
+            _react2.default.createElement('img', { src: _ruby2.default })
           ),
           _react2.default.createElement(
-            'a',
-            { className: _Home2.default.link, href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
-            'view repository'
+            'div',
+            { className: _Home2.default.copy },
+            _react2.default.createElement(
+              'h3',
+              { className: _Home2.default.title },
+              'Shopping Cart experience'
+            ),
+            _react2.default.createElement(
+              'span',
+              { className: _Home2.default.tag },
+              'Ruby, RSpec'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'This program adds items from a YAML file to a cart and accumulates the total at the end of the application.'
+            ),
+            _react2.default.createElement(
+              'a',
+              { className: _Home2.default.link, href: 'https://github.com/subramGrg/robot-simulator', target: '_blank' },
+              'view repository'
+            )
           )
         )
       );
@@ -26133,7 +26146,7 @@ module.exports = __webpack_require__.p + "img/ruby.png";
 
 
 // removed by extract-text-webpack-plugin
-module.exports = { "article": "dev-lib-stylesheets--Home-article", "title": "dev-lib-stylesheets--Home-title", "tag": "dev-lib-stylesheets--Home-tag", "link": "dev-lib-stylesheets--Home-link" };
+module.exports = { "article": "dev-lib-stylesheets--Home-article", "title": "dev-lib-stylesheets--Home-title", "tag": "dev-lib-stylesheets--Home-tag", "link": "dev-lib-stylesheets--Home-link", "timeline": "dev-lib-stylesheets--Home-timeline", "earlier-project": "dev-lib-stylesheets--Home-earlier-project", "image-wrapper": "dev-lib-stylesheets--Home-image-wrapper", "copy": "dev-lib-stylesheets--Home-copy" };
 
 /***/ }),
 /* 232 */
