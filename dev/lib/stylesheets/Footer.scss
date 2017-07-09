@@ -1,0 +1,30 @@
+@import "base";
+
+footer {
+  border-top: 2px solid #ccc;
+  padding: 26px;
+  background: #F9F9F9;
+  margin-top: 60px;
+
+  nav {
+    max-width: 670px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  p {
+    @include primary-light-font;
+    line-height: 26px;
+    width: 60%;
+    color: $black80;
+    padding: 20px 20px 20px 0;
+    border-right: 2px solid #ccc;
+    
+    span {
+      color: #ccc;
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+}

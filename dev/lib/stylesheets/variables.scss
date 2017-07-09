@@ -1,0 +1,20 @@
+$primary-colour: #2d2d2d;
+$black80: #585858;
+
+@mixin primary-font {
+  font-family: 'Roboto', Helvetica;
+}
+
+@mixin primary-light-font {
+  font-family: 'Roboto-light', Helvetica;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('../assets/fonts/roboto.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: url('../assets/fonts/roboto-light.woff') format('woff');
+}
