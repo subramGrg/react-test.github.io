@@ -1,0 +1,45 @@
+@import "variables";
+
+.article {
+  @include primary-font;
+
+  article {
+    margin-bottom: 40px;
+  }
+
+  h2.title {
+    @include primary-light-font;
+    font-size: 2rem;
+    margin: 16px 0 0;
+  }
+
+  .tag {
+    color: $black80;
+    font-style: italic;
+    display: block;
+    margin-bottom: 22px;
+  }
+
+  p {
+    margin: 0 0 24px;
+    word-spacing: 2px;
+    font-size: 18px;
+    color: $black80;
+    line-height: 30px;
+  }
+
+  .link {
+    transition: background 0.3s ease-out;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: $black80;
+    color: #fff;
+    width: 128px;
+    text-align: center;
+
+    &:hover {
+      background: $primary-colour;
+    }
+  }
+}
