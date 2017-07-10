@@ -33,10 +33,14 @@ var config = {
         test: /\.(jpg|png$)/,
         use: [{
           loader: 'file-loader',
-          options: {
+          query: {
             name: '[name].[ext]',
             outputPath: 'img/',
+<<<<<<< HEAD
             publicPath: './output/'
+=======
+            publicPath: 'output/' 
+>>>>>>> develop
           }
         }]
       } ,{
