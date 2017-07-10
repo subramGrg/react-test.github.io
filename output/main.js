@@ -26145,11 +26145,7 @@ exports.default = Home;
 "use strict";
 
 
-<<<<<<< HEAD
-module.exports = "./output/img/ruby.png";
-=======
 module.exports = "output/img/ruby.png";
->>>>>>> develop
 
 /***/ }),
 /* 231 */

@@ -36,11 +36,7 @@ var config = {
           query: {
             name: '[name].[ext]',
             outputPath: 'img/',
-<<<<<<< HEAD
-            publicPath: './output/'
-=======
-            publicPath: 'output/' 
->>>>>>> develop
+            publicPath: 'output/'
           }
         }]
       } ,{
