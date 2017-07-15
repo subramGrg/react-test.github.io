@@ -1,0 +1,50 @@
+.to-do-container {
+  width: 380px;
+  padding: 10px;
+  background: #222;
+  margin: 20px auto 0;
+
+  ul {
+    list-style: none;
+
+    li {
+      background: #f7ebc6;
+      border: 1px solid #f7d87c;
+      padding: 14px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+  }
+}
+
+.form-container {
+  background: #f1ede4;
+  padding: 50px;
+  min-height: 400px;
+
+  form {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  input[type='text'] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFF;
+  }
+
+  button {
+    padding: 13px 10px;
+    font-size: 16px;
+    margin-left: 10px;
+    background: #c2c0bc;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: #222;
+      color: #c2c0bc;
+    }
+  }
+}

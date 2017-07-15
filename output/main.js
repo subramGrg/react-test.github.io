@@ -25764,11 +25764,11 @@ var _section = __webpack_require__(227);
 
 var _section2 = _interopRequireDefault(_section);
 
-var _footer = __webpack_require__(237);
+var _footer = __webpack_require__(238);
 
 var _footer2 = _interopRequireDefault(_footer);
 
-var _Base = __webpack_require__(239);
+var _Base = __webpack_require__(240);
 
 var _Base2 = _interopRequireDefault(_Base);
 
@@ -26302,6 +26302,10 @@ var _to_do_entries = __webpack_require__(236);
 
 var _to_do_entries2 = _interopRequireDefault(_to_do_entries);
 
+var _TodoContainer = __webpack_require__(237);
+
+var _TodoContainer2 = _interopRequireDefault(_TodoContainer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26340,22 +26344,43 @@ var ToDoContainer = function (_React$Component) {
       e.preventDefault();
     }
   }, {
+    key: 'removeItem',
+    value: function removeItem(id) {
+      var itemList = this.state.list;
+
+      itemList.filter(function (item) {
+        if (item.key != id) return item;
+      });
+
+      this.setState({
+        list: itemList
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: _TodoContainer2.default['to-do-container'] },
         _react2.default.createElement(
-          'form',
-          { onSubmit: this.add },
-          _react2.default.createElement('input', { placeholder: 'Enter item', type: 'text', ref: function ref(el) {
-              _this2._input = el;
-            } }),
-          _react2.default.createElement('input', { type: 'submit' })
-        ),
-        _react2.default.createElement(_to_do_entries2.default, { entries: this.state.list })
+          'div',
+          { className: _TodoContainer2.default['form-container'] },
+          _react2.default.createElement(
+            'form',
+            { onSubmit: this.add },
+            _react2.default.createElement('input', { placeholder: 'Enter item', type: 'text', ref: function ref(el) {
+                _this2._input = el;
+              } }),
+            _react2.default.createElement(
+              'button',
+              null,
+              'Add'
+            )
+          ),
+          _react2.default.createElement(_to_do_entries2.default, { entries: this.state.list })
+        )
       );
     }
   }]);
@@ -26393,10 +26418,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var ToDoEntries = function (_React$Component) {
   _inherits(ToDoEntries, _React$Component);
 
-  function ToDoEntries() {
+  function ToDoEntries(props) {
     _classCallCheck(this, ToDoEntries);
 
-    return _possibleConstructorReturn(this, (ToDoEntries.__proto__ || Object.getPrototypeOf(ToDoEntries)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ToDoEntries.__proto__ || Object.getPrototypeOf(ToDoEntries)).call(this, props));
   }
 
   _createClass(ToDoEntries, [{
@@ -26407,9 +26432,10 @@ var ToDoEntries = function (_React$Component) {
         return _react2.default.createElement(
           'li',
           { key: item.key },
-          item.text
+          item.text,
+          _react2.default.createElement('span', null)
         );
-      });
+      }, this);
 
       return _react2.default.createElement(
         'ul',
@@ -26431,6 +26457,16 @@ exports.default = ToDoEntries;
 "use strict";
 
 
+// removed by extract-text-webpack-plugin
+module.exports = { "to-do-container": "dev-lib-stylesheets--TodoContainer-to-do-container", "form-container": "dev-lib-stylesheets--TodoContainer-form-container" };
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -26441,7 +26477,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Footer = __webpack_require__(238);
+var _Footer = __webpack_require__(239);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -26492,7 +26528,7 @@ var Footer = function (_React$Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 238 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26500,7 +26536,7 @@ exports.default = Footer;
 
 
 /***/ }),
-/* 239 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
