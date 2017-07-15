@@ -1,0 +1,27 @@
+@import "variables";
+
+h1 {
+  @include primary-light-font;
+  font-size: 2rem;
+}
+
+.intro {
+  margin: 20px 0;
+}
+
+.list-item {
+  @include primary-font;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0078C9;
+  text-decoration: none;
+}
+
+.project-list {
+  margin: 16px 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 16px;
+  }
+}
