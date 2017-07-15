@@ -1,3 +1,5 @@
+.dev-lib-stylesheets--Todo-heading {
+  font-size: 3rem; }
 @font-face {
   font-family: Roboto;
   src: url(fonts/roboto.woff) format("woff"); }
@@ -7,8 +9,8 @@
   src: url(fonts/roboto-light.woff) format("woff"); }
 
 body {
+  font-family: 'Roboto-light', Helvetica;
   margin: 0;
-  font-family: Helvetica, Arial;
   color: #2d2d2d; }
 
 h1,
@@ -26,6 +28,62 @@ p {
 
 img {
   max-width: 100%; }
+
+ul {
+  padding: 0; }
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/roboto.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: url(fonts/roboto-light.woff) format("woff"); }
+
+body {
+  font-family: 'Roboto-light', Helvetica;
+  margin: 0;
+  color: #2d2d2d; }
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0; }
+
+section {
+  max-width: 670px;
+  margin: 0 auto; }
+
+p {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  padding: 0; }
+
+footer {
+  border-top: 2px solid #ccc;
+  padding: 26px;
+  background: #F9F9F9;
+  margin-top: 60px; }
+  footer nav {
+    max-width: 670px;
+    margin: 0 auto;
+    height: auto; }
+  footer p {
+    font-family: 'Roboto-light', Helvetica;
+    line-height: 26px;
+    width: 60%;
+    color: #585858;
+    padding: 20px 20px 20px 0;
+    border-right: 2px solid #ccc; }
+    footer p span {
+      color: #ccc;
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 16px; }
 @font-face {
   font-family: Roboto;
   src: url(fonts/roboto.woff) format("woff"); }
@@ -93,48 +151,25 @@ img {
   font-family: 'Roboto-light';
   src: url(fonts/roboto-light.woff) format("woff"); }
 
-body {
-  margin: 0;
-  font-family: Helvetica, Arial;
-  color: #2d2d2d; }
+h1 {
+  font-family: 'Roboto-light', Helvetica;
+  font-size: 2rem; }
 
-h1,
-h2,
-h3,
-h4 {
-  margin: 0; }
+.dev-lib-stylesheets--Project-intro {
+  margin: 20px 0; }
 
-section {
-  max-width: 670px;
-  margin: 0 auto; }
+.dev-lib-stylesheets--Project-list-item {
+  font-family: 'Roboto', Helvetica;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0078C9;
+  text-decoration: none; }
 
-p {
-  margin: 0; }
-
-img {
-  max-width: 100%; }
-
-footer {
-  border-top: 2px solid #ccc;
-  padding: 26px;
-  background: #F9F9F9;
-  margin-top: 60px; }
-  footer nav {
-    max-width: 670px;
-    margin: 0 auto;
-    height: auto; }
-  footer p {
-    font-family: 'Roboto-light', Helvetica;
-    line-height: 26px;
-    width: 60%;
-    color: #585858;
-    padding: 20px 20px 20px 0;
-    border-right: 2px solid #ccc; }
-    footer p span {
-      color: #ccc;
-      font-size: 1.5rem;
-      display: block;
-      margin-bottom: 16px; }
+.dev-lib-stylesheets--Project-project-list {
+  margin: 16px 0;
+  list-style: none; }
+  .dev-lib-stylesheets--Project-project-list li {
+    margin-bottom: 16px; }
 @font-face {
   font-family: Roboto;
   src: url(fonts/roboto.woff) format("woff"); }

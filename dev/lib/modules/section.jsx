@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import { Route } from 'react-router-dom';
 import Project from './projects.jsx';
 import Home from './home.jsx';
+import ToDo from './to_do.jsx';
 
 class Section extends React.Component {
   render() {
@@ -11,6 +11,7 @@ class Section extends React.Component {
       <section>
         <Route exact path='/' component={Home}/>
         <Route path='/project' component={Project}/>
+        <Route path='/to-do' component={ToDo}/>
       </section>
     );
   }

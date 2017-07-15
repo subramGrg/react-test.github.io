@@ -8,9 +8,9 @@ class Header extends React.Component {
     return (
       <header className={style.header}>
         <nav className={style.nav}>
-          <NavLink exact to='/'>Home</NavLink>
+          <NavLink exact to='/'>Ruby Projects</NavLink>
           <NavLink className={style.logo} to='/'>SG</NavLink>
-          <NavLink to='/project'>Projects</NavLink>
+          <NavLink to='/project'>React Projects</NavLink>
         </nav>
       </header>
     );
