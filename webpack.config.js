@@ -6,6 +6,7 @@ var OUTPUT = path.resolve(__dirname, 'output');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
+  devtool: 'inline-source-map',
   entry: DEV + '/index.jsx',
   output: {
     path: OUTPUT,
@@ -36,7 +37,7 @@ var config = {
           query: {
             name: '[name].[ext]',
             outputPath: 'img/',
-            publicPath: 'output/' 
+            publicPath: 'output/'
           }
         }]
       } ,{

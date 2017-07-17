@@ -1,27 +1,16 @@
 import React from 'react';
+import ToDo from './to_do_entry.jsx';
 
-class ToDoEntries extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    var entries = this.props.entries,
-        toDoList = entries.map(function(item) {
-          return(
-            <li key={item.key}>
-              {item.text}
-              <span></span>
-            </li>
-          );
-        }, this);
-
-    return(
-      <ul>
-        {toDoList}
-      </ul>
-    );
-  }
+const ToDoEntries = ({entries, removeCallback}) => {
+  return(
+    <ul>
+      {
+        entries.map((item, index) => {
+          return(<ToDo key={item.key} value={item.text} removeItem={removeCallback}/>);
+        })
+      }
+    </ul>
+  );
 }
 
 export default ToDoEntries;

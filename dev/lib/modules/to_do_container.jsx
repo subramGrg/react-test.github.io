@@ -3,11 +3,12 @@ import ToDoEntries from './to_do_entries.jsx';
 
 import Style from '../stylesheets/TodoContainer.scss'
 
-class ToDoContainer extends React.Component {
+class TodoContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { list: [] }
     this.add = this.addItem.bind(this);
+    this.removeItem = this.removeItem.bind(this);
   }
 
   addItem(e) {
@@ -25,19 +26,6 @@ class ToDoContainer extends React.Component {
     e.preventDefault();
   }
 
-  removeItem(id) {
-    let itemList = this.state.list;
-
-    itemList.filter(function(item) {
-      if(item.key != id)
-        return item
-    });
-
-    this.setState({
-      list: itemList
-    });
-  }
-
   render() {
     return(
       <div className={Style['to-do-container']}>
@@ -47,11 +35,25 @@ class ToDoContainer extends React.Component {
             <button>Add</button>
           </form>
 
-          <ToDoEntries entries={this.state.list}/>
+          <ToDoEntries entries={this.state.list}
+            removeCallback={this.removeItem}
+          />
         </div>
       </div>
     );
   }
+
+  removeItem() {
+    let itemList = this.state.list;
+
+    let newList = itemList.filter(function(item) {
+        return item.key != id
+    });
+
+    this.setState({
+      list: newList
+    });
+  }
 }
 
-export default ToDoContainer;
+export default TodoContainer;
