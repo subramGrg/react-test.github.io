@@ -26,6 +26,18 @@ class TodoContainer extends React.Component {
     e.preventDefault();
   }
 
+  removeItem(index) {
+    let itemList = this.state.list;
+
+    let newList = itemList.filter(function(item) {
+        return item.key != index
+    });
+
+    this.setState({
+      list: newList
+    });
+  }
+
   render() {
     return(
       <div className={Style['to-do-container']}>
@@ -41,18 +53,6 @@ class TodoContainer extends React.Component {
         </div>
       </div>
     );
-  }
-
-  removeItem() {
-    let itemList = this.state.list;
-
-    let newList = itemList.filter(function(item) {
-        return item.key != id
-    });
-
-    this.setState({
-      list: newList
-    });
   }
 }
 

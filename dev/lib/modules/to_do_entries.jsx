@@ -6,7 +6,7 @@ const ToDoEntries = ({entries, removeCallback}) => {
     <ul>
       {
         entries.map((item, index) => {
-          return(<ToDo key={item.key} value={item.text} removeItem={removeCallback}/>);
+          return(<ToDo index={item.key} key={item.key} value={item.text} removeItem={removeCallback}/>);
         })
       }
     </ul>
